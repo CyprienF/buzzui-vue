@@ -18,12 +18,8 @@ const { primary } = reactive(props);
   </button>
 </template>
 
-<style scoped>
-.btn {
-  padding: 0.5rem 1rem;
-}
-.btn.primary {
-  background: hsl(239, 100%, 27%);
-  color: #fff;
+<style scoped lang="scss">
+button {
+  color: $primary;
 }
 </style>
