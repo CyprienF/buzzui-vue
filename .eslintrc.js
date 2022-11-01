@@ -7,12 +7,7 @@ module.exports = {
   "parserOptions": {
     "parser": "@typescript-eslint/parser"
   },
-  "extends": [
-    "plugin:vue/vue3-recommended",
-    "eslint:recommended",
-    "@vue/typescript/recommended",
-    "prettier"
-  ],
+  "extends": ["plugin:vue/vue3-recommended", "eslint:recommended", "@vue/typescript/recommended", "prettier", "plugin:storybook/recommended"],
   "rules": {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
