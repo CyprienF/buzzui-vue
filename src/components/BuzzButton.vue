@@ -5,11 +5,15 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { computed } from 'vue';
 
 import { Color } from '../types/color';
 import { Size } from '../types/size';
 import { config } from '../utils/config';
+
+import { useColor } from '../composables/useColor';
+
+const { getColor, getInvertColor } = useColor();
 
 interface Props {
   color: Color;
@@ -21,11 +25,13 @@ const props = withDefaults(defineProps<Props>(), {
   size: config.defaultSize as Size,
 });
 
-const color = ref<string>(props.color);
+const color = computed(() => getInvertColor(props.color));
+const backgroundColor = computed(() => getColor(props.color));
 </script>
 
 <style scoped lang="scss">
 .button {
   color: v-bind(color);
+  background-color: v-bind(backgroundColor);
 }
 </style>
