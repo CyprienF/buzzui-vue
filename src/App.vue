@@ -1,6 +1,8 @@
 <template>
-  <BuzzButton color="warning" size="regular">Primary button</BuzzButton>
-  <BuzzIcon pack="fa-solid" icon="fa-image" color="dark" size="regular"></BuzzIcon>
+  <BuzzButton color="discord" size="regular">
+    <BuzzIcon pack="fa-brands" icon="fa-discord" color="white" size="regular" />
+    Discord
+  </BuzzButton>
 </template>
 
 <script setup lang="ts">

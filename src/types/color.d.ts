@@ -1,1 +1,18 @@
-export type Color = 'primary' | 'success' | 'warning' | 'danger' | 'light' | 'dark' | 'white' | 'black';
+export type Color =
+  | 'primary'
+  | 'success'
+  | 'warning'
+  | 'danger'
+  | 'light'
+  | 'dark'
+  | 'white'
+  | 'black'
+  | 'twitter'
+  | 'youtube'
+  | 'whatsapp'
+  | 'messenger'
+  | 'twitch'
+  | 'reddit'
+  | 'discord'
+  | 'facebook'
+  | 'linkedin';

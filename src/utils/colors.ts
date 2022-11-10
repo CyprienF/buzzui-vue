@@ -7,4 +7,13 @@ export const colors = {
   danger: '#ed1c24',
   light: '#ebedf0',
   dark: '#363636',
+  twitter: '#1da1f2',
+  youtube: '#ff0000',
+  whatsapp: '#26d367',
+  messenger: '#0a7cff',
+  twitch: '#8c44f7',
+  reddit: '#ff4500',
+  discord: '#5562ea',
+  facebook: '#395498',
+  linkedin: '#0077b7',
 };
