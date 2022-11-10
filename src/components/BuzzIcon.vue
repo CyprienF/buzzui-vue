@@ -16,7 +16,7 @@ import { useColor } from '../composables/useColor';
 const { getColor } = useColor();
 
 interface Props {
-  style: string;
+  pack: string;
   icon: string;
   color: Color;
   size: Size;
@@ -37,18 +37,18 @@ const size = computed(() => `icon__${props.size}`);
 <style scoped lang="scss">
 .icon {
   color: v-bind(color);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 
   &__small {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   &__medium {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   &__large {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 }
 </style>
