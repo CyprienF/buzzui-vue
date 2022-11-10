@@ -1,1 +1,1 @@
-export type Color = 'primary';
+export type Color = 'primary' | 'success' | 'light' | 'dark' | 'white' | 'black';
