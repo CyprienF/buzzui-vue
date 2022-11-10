@@ -1,5 +1,7 @@
 <template>
-  <div class="icon"><font-awesome-icon :icon="icon" /></div>
+  <div class="icon" :class="size">
+    <font-awesome-icon :icon="icon" />
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -16,7 +18,6 @@ const { getColor } = useColor();
 interface Props {
   style: string;
   icon: string;
-  sharp: boolean;
   color: Color;
   size: Size;
 }
@@ -30,10 +31,24 @@ const props = withDefaults(defineProps<Props>(), {
 
 const icon = computed(() => `${props.pack} ${props.icon}`);
 const color = computed(() => getColor(props.color));
+const size = computed(() => `icon__${props.size}`);
 </script>
 
 <style scoped lang="scss">
 .icon {
   color: v-bind(color);
+  font-size: 1.5rem;
+
+  &__small {
+    font-size: 1.25rem;
+  }
+
+  &__medium {
+    font-size: 1.75rem;
+  }
+
+  &__large {
+    font-size: 2rem;
+  }
 }
 </style>
