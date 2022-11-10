@@ -33,5 +33,11 @@ const backgroundColor = computed(() => getColor(props.color));
 .button {
   color: v-bind(color);
   background-color: v-bind(backgroundColor);
+
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.75rem 2.25rem;
+  border-radius: 0.4rem;
+  border: none;
 }
 </style>
