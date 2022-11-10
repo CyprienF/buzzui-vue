@@ -34,9 +34,14 @@ const backgroundColor = computed(() => getColor(props.color));
   color: v-bind(color);
   background-color: v-bind(backgroundColor);
 
-  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.5rem;
+
+  font-size: 1rem;
   font-weight: 600;
-  padding: 0.75rem 2.25rem;
+  padding: 0.6rem 3rem;
   border-radius: 0.4rem;
   border: none;
 }
