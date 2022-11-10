@@ -1,5 +1,5 @@
 <template>
-  <BuzzButton color="primary" size="regular">Primary button</BuzzButton>
+  <BuzzButton color="warning" size="regular">Primary button</BuzzButton>
   <BuzzIcon pack="fa-solid" icon="fa-image" color="dark" size="regular"></BuzzIcon>
 </template>
 
