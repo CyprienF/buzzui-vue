@@ -55,7 +55,11 @@ const computedClasses = computed(() => {
   padding: 0.6rem 3rem;
   border-radius: 0.4rem;
   border: none;
-  cursor: pointer;
+
+  &:hover {
+    cursor: pointer;
+    filter: brightness(95%);
+  }
 
   &__rounded {
     border-radius: 20rem;
