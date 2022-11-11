@@ -1,7 +1,7 @@
 <template>
-  <BuzzButton color="discord" size="regular">
-    <BuzzIcon pack="fa-brands" icon="fa-discord" color="white" size="regular" />
-    Discord
+  <BuzzButton color="primary" size="regular" :disabled="true">
+    <BuzzIcon pack="fa-brands" icon="fa-github" color="white" size="regular" />
+    Github
   </BuzzButton>
 </template>
 
