@@ -36,6 +36,9 @@ const color = computed(() => getInvertColor(props.color));
 const backgroundColor = computed(() => getColor(props.color));
 const computedClasses = computed(() => {
   return {
+    button__small: props.size === 'small',
+    button__medium: props.size === 'medium',
+    button__large: props.size === 'large',
     button__rounded: props.shape === 'rounded',
     button__disabled: props.disabled,
     button__outlined: props.outlined,
@@ -62,6 +65,18 @@ const computedClasses = computed(() => {
   &:hover {
     cursor: pointer;
     filter: brightness(95%);
+  }
+
+  &__small {
+    padding: 0.4rem 2.5rem;
+  }
+
+  &__medium {
+    padding: 0.8rem 3.5rem;
+  }
+
+  &__large {
+    padding: 1rem 4rem;
   }
 
   &__rounded {
