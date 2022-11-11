@@ -10,15 +10,17 @@ import { Shape } from '../types/shape';
 import { config } from '../utils/config';
 
 interface Props {
-  image: string;
+  image?: string;
   size?: Size;
   shape?: Shape;
+  clickable?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   image: config.defaultAvatarImage as string,
   size: config.defaultSize as Size,
   shape: config.defaultShape as Shape,
+  clickable: config.defaultAvatarClickable as boolean,
 });
 
 const image = computed(() => props.image);
@@ -28,6 +30,7 @@ const computedClasses = computed(() => {
     avatar__medium: props.size === 'medium',
     avatar__large: props.size === 'large',
     avatar__rounded: props.shape === 'rounded',
+    avatar__clickable: props.clickable,
   };
 });
 </script>
@@ -52,6 +55,10 @@ const computedClasses = computed(() => {
 
   &__rounded {
     border-radius: 20rem;
+  }
+
+  &__clickable {
+    cursor: pointer;
   }
 }
 </style>

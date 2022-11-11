@@ -5,4 +5,5 @@ export const config = {
   defaultDisabled: false,
   defaultOutlined: false,
   defaultAvatarImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn35yS42ahMEoiyqgI_BmTXHzTv0hBWM1x0Q&usqp=CAU',
+  defaultAvatarClickable: false,
 };
