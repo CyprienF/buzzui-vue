@@ -1,7 +1,7 @@
 <template>
-  <BuzzButton color="primary" size="regular" :disabled="true">
-    <BuzzIcon pack="fa-brands" icon="fa-github" color="white" size="regular" />
-    Github
+  <BuzzButton color="twitter" size="regular" shape="rounded">
+    <BuzzIcon pack="fa-brands" icon="fa-twitter" color="white" size="regular" />
+    Twitter
   </BuzzButton>
 </template>
 

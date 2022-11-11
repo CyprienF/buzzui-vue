@@ -9,6 +9,7 @@ import { computed } from 'vue';
 
 import { Color } from '../types/color';
 import { Size } from '../types/size';
+import { Shape } from '../types/shape';
 import { config } from '../utils/config';
 
 import { useColor } from '../composables/useColor';
@@ -18,19 +19,24 @@ const { getColor, getInvertColor } = useColor();
 interface Props {
   color: Color;
   size: Size;
-  disabled: boolean;
+  shape?: Shape;
+  disabled?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   color: config.defaultColor as Color,
   size: config.defaultSize as Size,
+  shape: config.defaultShape as Shape,
   disabled: config.defaultDisabled as boolean,
 });
 
 const color = computed(() => getInvertColor(props.color));
 const backgroundColor = computed(() => getColor(props.color));
 const computedClasses = computed(() => {
-  return { button__disabled: props.disabled };
+  return {
+    button__rounded: props.shape === 'rounded',
+    button__disabled: props.disabled,
+  };
 });
 </script>
 
@@ -50,6 +56,10 @@ const computedClasses = computed(() => {
   border-radius: 0.4rem;
   border: none;
   cursor: pointer;
+
+  &__rounded {
+    border-radius: 20rem;
+  }
 
   &__disabled {
     cursor: not-allowed;
