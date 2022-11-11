@@ -1,5 +1,5 @@
 <template>
-  <button class="button">
+  <button class="button" :class="computedClasses" :disabled="disabled">
     <slot />
   </button>
 </template>
@@ -9,6 +9,7 @@ import { computed } from 'vue';
 
 import { Color } from '../types/color';
 import { Size } from '../types/size';
+import { Shape } from '../types/shape';
 import { config } from '../utils/config';
 
 import { useColor } from '../composables/useColor';
@@ -16,17 +17,33 @@ import { useColor } from '../composables/useColor';
 const { getColor, getInvertColor } = useColor();
 
 interface Props {
-  color: Color;
-  size: Size;
+  color?: Color;
+  size?: Size;
+  shape?: Shape;
+  disabled?: boolean;
+  outlined?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   color: config.defaultColor as Color,
   size: config.defaultSize as Size,
+  shape: config.defaultShape as Shape,
+  disabled: config.defaultDisabled as boolean,
+  outlined: config.defaultOutlined as boolean,
 });
 
 const color = computed(() => getInvertColor(props.color));
 const backgroundColor = computed(() => getColor(props.color));
+const computedClasses = computed(() => {
+  return {
+    button__small: props.size === 'small',
+    button__medium: props.size === 'medium',
+    button__large: props.size === 'large',
+    button__rounded: props.shape === 'rounded',
+    button__disabled: props.disabled,
+    button__outlined: props.outlined,
+  };
+});
 </script>
 
 <style scoped lang="scss">
@@ -44,5 +61,37 @@ const backgroundColor = computed(() => getColor(props.color));
   padding: 0.6rem 3rem;
   border-radius: 0.4rem;
   border: none;
+
+  &:hover {
+    cursor: pointer;
+    filter: brightness(95%);
+  }
+
+  &__small {
+    padding: 0.4rem 2.5rem;
+  }
+
+  &__medium {
+    padding: 0.8rem 3.5rem;
+  }
+
+  &__large {
+    padding: 1rem 4rem;
+  }
+
+  &__rounded {
+    border-radius: 20rem;
+  }
+
+  &__disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  &__outlined {
+    color: v-bind(backgroundColor);
+    border: 1px solid v-bind(backgroundColor);
+    background-color: $white;
+  }
 }
 </style>

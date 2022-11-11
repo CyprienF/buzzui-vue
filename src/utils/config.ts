@@ -1,6 +1,7 @@
-import { colors } from './colors';
-
 export const config = {
-  defaultColor: colors.primary,
+  defaultColor: 'primary',
   defaultSize: 'regular',
+  defaultShape: 'squared',
+  defaultDisabled: false,
+  defaultOutlined: false,
 };

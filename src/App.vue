@@ -1,13 +1,15 @@
 <template>
-  <BuzzButton color="discord" size="regular">
-    <BuzzIcon pack="fa-brands" icon="fa-discord" color="white" size="regular" />
-    Discord
-  </BuzzButton>
+  <BuzzButton size="small">Small button</BuzzButton>
+  <br />
+  <BuzzButton>Regular button</BuzzButton>
+  <br />
+  <BuzzButton size="medium">Medium button</BuzzButton>
+  <br />
+  <BuzzButton size="large">Large button</BuzzButton>
 </template>
 
 <script setup lang="ts">
 import BuzzButton from '@/components/BuzzButton.vue';
-import BuzzIcon from '@/components/BuzzIcon.vue';
 </script>
 
 <style scoped></style>
