@@ -21,6 +21,7 @@ interface Props {
   size: Size;
   shape?: Shape;
   disabled?: boolean;
+  outlined?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -28,6 +29,7 @@ const props = withDefaults(defineProps<Props>(), {
   size: config.defaultSize as Size,
   shape: config.defaultShape as Shape,
   disabled: config.defaultDisabled as boolean,
+  outlined: config.defaultOutlined as boolean,
 });
 
 const color = computed(() => getInvertColor(props.color));
@@ -36,6 +38,7 @@ const computedClasses = computed(() => {
   return {
     button__rounded: props.shape === 'rounded',
     button__disabled: props.disabled,
+    button__outlined: props.outlined,
   };
 });
 </script>
@@ -68,6 +71,12 @@ const computedClasses = computed(() => {
   &__disabled {
     cursor: not-allowed;
     opacity: 0.5;
+  }
+
+  &__outlined {
+    color: v-bind(backgroundColor);
+    border: 1px solid v-bind(backgroundColor);
+    background-color: $white;
   }
 }
 </style>

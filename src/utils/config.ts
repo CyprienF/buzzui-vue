@@ -5,4 +5,5 @@ export const config = {
   defaultSize: 'regular',
   defaultShape: 'squared',
   defaultDisabled: false,
+  defaultOutlined: false,
 };

@@ -1,7 +1,7 @@
 <template>
-  <BuzzButton color="twitter" size="regular" shape="rounded">
-    <BuzzIcon pack="fa-brands" icon="fa-twitter" color="white" size="regular" />
-    Twitter
+  <BuzzButton color="discord" size="regular" shape="rounded" :outlined="true">
+    <BuzzIcon pack="fa-brands" icon="fa-discord" color="discord" size="regular" />
+    Discord
   </BuzzButton>
 </template>
 
