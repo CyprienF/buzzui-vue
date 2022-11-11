@@ -17,8 +17,8 @@ import { useColor } from '../composables/useColor';
 const { getColor, getInvertColor } = useColor();
 
 interface Props {
-  color: Color;
-  size: Size;
+  color?: Color;
+  size?: Size;
   shape?: Shape;
   disabled?: boolean;
   outlined?: boolean;
