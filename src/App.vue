@@ -1,9 +1,7 @@
 <template>
-  <BuzzAvatar></BuzzAvatar>
+  <div></div>
 </template>
 
-<script setup lang="ts">
-import BuzzAvatar from './components/BuzzAvatar.vue';
-</script>
+<script setup lang="ts"></script>
 
 <style scoped></style>
