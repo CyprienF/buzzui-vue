@@ -1,6 +1,6 @@
 <template>
   <div class="icon" :class="size">
-    <font-awesome-icon :icon="icon" />
+    <FontAwesomeIcon :icon="icon" />
   </div>
 </template>
 
@@ -13,13 +13,23 @@ import { config } from '../utils/config';
 
 import { useColor } from '../composables/useColor';
 
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
+
+library.add(fas, fab, far);
+
 const { getColor } = useColor();
 
 interface Props {
-  pack: string;
-  icon: string;
-  color: Color;
-  size: Size;
+  pack?: string;
+  icon?: string;
+  color?: Color;
+  size?: Size;
 }
 
 const props = withDefaults(defineProps<Props>(), {
