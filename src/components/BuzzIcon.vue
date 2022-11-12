@@ -8,6 +8,7 @@
 import { computed } from 'vue';
 
 import { Color } from '../types/color';
+import { Pack } from '../types/pack';
 import { Size } from '../types/size';
 import { config } from '../utils/config';
 
@@ -17,24 +18,24 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 
-import { fas } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 
 library.add(fas, fab, far);
 
 const { getColor } = useColor();
 
 interface Props {
-  pack?: string;
+  pack?: Pack;
   icon?: string;
   color?: Color;
   size?: Size;
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  pack: 'fa-solid',
-  icon: 'fa-user',
+  pack: 'fa-solid' as Pack,
+  icon: 'fa-user' as string,
   color: config.defaultColor as Color,
   size: config.defaultSize as Size,
 });

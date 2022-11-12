@@ -28,8 +28,8 @@ const props = withDefaults(defineProps<Props>(), {
   color: config.defaultColor as Color,
   size: config.defaultSize as Size,
   shape: config.defaultShape as Shape,
-  disabled: config.defaultDisabled as boolean,
-  outlined: config.defaultOutlined as boolean,
+  disabled: config.defaultButtonDisabled as boolean,
+  outlined: config.defaultButtonOutlined as boolean,
 });
 
 const color = computed(() => getInvertColor(props.color));
