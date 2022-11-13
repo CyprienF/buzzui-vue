@@ -12,13 +12,13 @@ Documentation is coming
 Documentation is coming
 
 ## Props
-| Prop        | Description                    | Default   | Values                 |
-| ----------- | ------------------------------ | --------- | ---------------------- |
-| color       | Background color of the button | `primary` | [All color values]()   |
-| size        | Size of the button             | `regular` | [All size values]()    |
-| shape       | Shape of the button            | `squared` | `squared` or `rounded` |
-| disabled    | Is the button disabled?        | `false`   | `true` or `false`      |
-| outlined    | Is the button outlined?        | `false`   | `true` or `false`      |
+| Prop        | Description                    | Default   | Values                                                              |
+| ----------- | ------------------------------ | --------- | ------------------------------------------------------------------- |
+| color       | Background color of the button | `primary` | [All color values](https://buzzui-vue.netlify.app/guide/types.html) |
+| size        | Size of the button             | `regular` | [All size values](https://buzzui-vue.netlify.app/guide/types.html)  |
+| shape       | Shape of the button            | `squared` | `squared` or `rounded`                                              |
+| disabled    | Is the button disabled?        | `false`   | `true` or `false`                                                   |
+| outlined    | Is the button outlined?        | `false`   | `true` or `false`                                                   |
 
 ## Events
 BuzzButton component has no event yet.
@@ -87,7 +87,7 @@ BuzzButton component has no event yet.
 
 ## Icons
 
-To learn more about icons please refer to the [BuzzIcon documentation]().
+To learn more about icons please refer to the [BuzzIcon documentation](https://buzzui-vue.netlify.app/components/buzz-icon.html).
 
 <div class="flex-container">
   <BuzzButton color="twitter">
