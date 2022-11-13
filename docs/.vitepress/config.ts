@@ -36,6 +36,7 @@ function sidebar() {
       items: [
         { text: 'Introduction', link: 'guide/introduction' },
         { text: 'Getting Started', link: 'guide/getting-started' },
+        { text: 'Types', link: 'guide/types' },
       ],
     },
     {
