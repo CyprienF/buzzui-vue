@@ -1,7 +1,9 @@
 name: Publish to Netlify
 
 on:
-  pull_request: [main]
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
@@ -19,7 +21,7 @@ jobs:
         run: npm i
 
       - name: Build Vitepress
-        run: npm docs:build
+        run: npm run docs:build
 
       - name: Deploy Vitepress to Netlify
         uses: nwtgck/actions-netlify@v1.2

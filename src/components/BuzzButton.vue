@@ -28,8 +28,8 @@ const props = withDefaults(defineProps<Props>(), {
   color: config.defaultColor as Color,
   size: config.defaultSize as Size,
   shape: config.defaultShape as Shape,
-  disabled: config.defaultDisabled as boolean,
-  outlined: config.defaultOutlined as boolean,
+  disabled: config.defaultButtonDisabled as boolean,
+  outlined: config.defaultButtonOutlined as boolean,
 });
 
 const color = computed(() => getInvertColor(props.color));
@@ -58,7 +58,7 @@ const computedClasses = computed(() => {
 
   font-size: 1rem;
   font-weight: 600;
-  padding: 0.6rem 3rem;
+  padding: 0.4rem 2.5rem;
   border-radius: 0.4rem;
   border: none;
 
@@ -68,15 +68,15 @@ const computedClasses = computed(() => {
   }
 
   &__small {
-    padding: 0.4rem 2.5rem;
+    padding: 0.2rem 2rem;
   }
 
   &__medium {
-    padding: 0.8rem 3.5rem;
+    padding: 0.6rem 3rem;
   }
 
   &__large {
-    padding: 1rem 4rem;
+    padding: 0.8rem 3.5rem;
   }
 
   &__rounded {
@@ -84,14 +84,14 @@ const computedClasses = computed(() => {
   }
 
   &__disabled {
-    cursor: not-allowed;
+    cursor: not-allowed !important;
     opacity: 0.5;
   }
 
   &__outlined {
     color: v-bind(backgroundColor);
     border: 1px solid v-bind(backgroundColor);
-    background-color: $white;
+    background-color: transparent;
   }
 }
 </style>

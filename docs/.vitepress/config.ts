@@ -32,13 +32,16 @@ function sidebar() {
   return [
     {
       text: 'Guide',
+      collapsible: true,
       items: [
         { text: 'Introduction', link: 'guide/introduction' },
         { text: 'Getting Started', link: 'guide/getting-started' },
+        { text: 'Types', link: 'guide/types' },
       ],
     },
     {
       text: 'Components',
+      collapsible: true,
       items: [
         { text: 'BuzzAvatar', link: 'components/buzz-avatar' },
         { text: 'BuzzButton', link: 'components/buzz-button' },
